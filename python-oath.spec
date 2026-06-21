@@ -3,10 +3,10 @@ Version:        1.4.4
 Release:        %autorelease
 Summary:        Python implementation of HOTP, TOTP and OCRA
 
-# License field says BSD-3-Clause but the package is tagged as MIT
-License:        MIT OR BSD-3-Clause
+License:        BSD-3-Clause
 URL:            https://github.com/bdauvergne/python-oath
 Source:         %{url}/archive/refs/tags/v%{version}.tar.gz
+Patch:          %{url}/pull/41.patch
 
 BuildArch:      noarch
 BuildRequires:  python3-devel
@@ -46,6 +46,7 @@ Summary:        %{summary}
 
 %files -n python3-oath -f %{pyproject_files}
 %doc README.rst
+%doc doc/*
 
 
 %changelog
