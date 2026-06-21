@@ -52,8 +52,8 @@ Summary:        %{summary}
 
 
 %files -n python3-nitrokey -f %{pyproject_files}
-%license LICENSES/Apache-2.0.txt
-%license LICENSES/MIT.txt
+%license LICENSES/*
+%doc README.md
 
 %changelog
 %autochangelog
