@@ -32,6 +32,8 @@ Recommends:     %{name}+pcsc = %{version}
 
 %prep
 %autosetup -p1 -n pynitrokey-%{version}
+# docs/packaging.md says to replace this file with distro-specific instructions
+echo 'PCSC_ABSENT = "Please install %{name}+pcsc using dnf to enable PCSC support"' > pynitokey/cli/nk3/pcsc_absent.py
 
 %pyproject_patch_dependency hidapi:drop_upper
 
