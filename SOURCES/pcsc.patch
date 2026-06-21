@@ -1,0 +1,15 @@
+Index: pynitrokey/cli/nk3/pcsc_absent.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/pynitrokey/cli/nk3/pcsc_absent.py b/pynitrokey/cli/nk3/pcsc_absent.py
+--- a/pynitrokey/cli/nk3/pcsc_absent.py	(revision b3579ac032083c5b50b7bf6ab980d0c54644d991)
++++ b/pynitrokey/cli/nk3/pcsc_absent.py	(date 1782061781341)
+@@ -1,4 +1,4 @@
+ # Copyright Nitrokey GmbH
+ # SPDX-License-Identifier: Apache-2.0 OR MIT
+ 
+-PCSC_ABSENT = "This command requires the pyscard library that is not available on your system. Please consult https://docs.nitrokey.com/nitrokeys/nitrokey3/troubleshooting#pyscard-is-not-available for more information"
++PCSC_ABSENT = "Please install python3-pynitrokey+pcsc using dnf to enable PCSC support"
+
