@@ -29,6 +29,7 @@ Summary:        %{summary}
 # rpmlint wont let us depend on libnitrokey directly
 Requires:       /usr/lib/udev/rules.d/41-nitrokey.rules
 Recommends:     %{name}+pcsc = %{version}
+Provides:       nitropy
 
 %description -n python3-pynitrokey %_description
 
