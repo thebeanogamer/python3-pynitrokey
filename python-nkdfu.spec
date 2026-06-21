@@ -3,9 +3,9 @@ Version:        0.2
 Release:        %autorelease
 Summary:        DFU tool for updating Nitrokeys firmware
 
-License:         GPL-2.0-or-later
+License:        GPL-2.0-or-later
 URL:            https://github.com/Nitrokey/nkdfu
-Source:         %{pypi_source nkdfu}
+Source:         %{url}/archive/refs/tags/v%{version}.tar.gz
 
 BuildArch:      noarch
 BuildRequires:  python3-devel
@@ -35,7 +35,7 @@ Summary:        %{summary}
 
 %install
 %pyproject_install
-%pyproject_save_files nkdfu
+%pyproject_save_files nkdfu -L
 
 
 %check
@@ -44,6 +44,8 @@ Summary:        %{summary}
 
 %files -n python3-nkdfu -f %{pyproject_files}
 %{_bindir}/nkdfu
+%license LICENSE
+%doc README.md
 
 %changelog
 %autochangelog
