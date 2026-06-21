@@ -35,6 +35,10 @@ Recommends:     %{name}+pcsc = %{version}
 
 %pyproject_patch_dependency hidapi:drop_upper
 
+%if 0%{fedora} < 44
+%pyproject_patch_dependency click:drop_lower
+%endif
+
 %generate_buildrequires
 %pyproject_buildrequires -x pcsc
 
