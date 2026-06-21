@@ -19,7 +19,10 @@ BuildRequires:  python3dist(oath)
 
 %global _description %{expand:
 A command line interface for the Nitrokey FIDO2, Nitrokey Start, 
-Nitrokey 3 and NetHSM.}
+Nitrokey 3 and NetHSM.
+
+Includes commands for managing enrolled keys, opening encrypted
+storage, and generating OTPs.}
 
 %description %_description
 
