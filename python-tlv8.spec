@@ -11,9 +11,9 @@ BuildArch:      noarch
 BuildRequires:  python3-devel
 
 %global _description %{expand:
-Python module to handle type-length-value _TLV_ encoded data 8-bit type, 8-bit length, 
-and N-byte value as described within the Apple HomeKit Accessory Protocol Specification
-Non-Commercial Version Release R2.}
+Python module to handle type-length-value _TLV_ encoded data 8-bit 
+type, 8-bit length, and N-byte value as described within the Apple 
+HomeKit Accessory Protocol Specification Non-Commercial Version Release R2.}
 
 %description %_description
 
@@ -45,6 +45,7 @@ Summary:        %{summary}
 
 
 %files -n python3-tlv8 -f %{pyproject_files}
+%doc README.md
 
 
 %changelog
