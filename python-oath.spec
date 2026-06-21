@@ -37,7 +37,7 @@ Summary:        %{summary}
 
 %install
 %pyproject_install
-%pyproject_save_files oath
+%pyproject_save_files oath -L
 
 
 %check
