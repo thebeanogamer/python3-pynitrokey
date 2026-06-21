@@ -14,8 +14,8 @@ BuildArch:      noarch
 BuildRequires:  python3-devel
 
 # Test dependencies (as the generator can't parse Poetry dev deps)
-BuildRequires: python3dist(pytest)
-BuildRequires: python3dist(oath)
+BuildRequires:  python3dist(pytest)
+BuildRequires:  python3dist(oath)
 
 %global _description %{expand:
 A command line interface for the Nitrokey FIDO2, Nitrokey Start, 
