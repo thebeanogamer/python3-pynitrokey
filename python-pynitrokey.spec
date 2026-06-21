@@ -18,14 +18,16 @@ BuildRequires: python3dist(pytest)
 BuildRequires: python3dist(oath)
 
 %global _description %{expand:
-A command line interface for the Nitrokey FIDO2, Nitrokey Start, Nitrokey 3 and NetHSM.}
+A command line interface for the Nitrokey FIDO2, Nitrokey Start, 
+Nitrokey 3 and NetHSM.}
 
 %description %_description
 
 %package -n     python3-pynitrokey
 Summary:        %{summary}
 
-Requires:       libnitrokey
+# rpmlint wont let us depend on libnitrokey directly
+Requires:       /usr/lib/udev/rules.d/41-nitrokey.rules
 Recommends:     %{name}+pcsc = %{version}
 
 %description -n python3-pynitrokey %_description
@@ -63,6 +65,7 @@ Recommends:     %{name}+pcsc = %{version}
 %files -n python3-pynitrokey -f %{pyproject_files}
 %{_bindir}/nitropy
 %license LICENSES/*
+%doc README.md
 
 
 %changelog
