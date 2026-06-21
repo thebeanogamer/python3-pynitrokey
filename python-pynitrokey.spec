@@ -45,7 +45,7 @@ Recommends:     %{name}+pcsc = %{version}
 
 %install
 %pyproject_install
-%pyproject_save_files -l pynitrokey
+%pyproject_save_files -l pynitrokey -L
 
 
 %check
@@ -55,6 +55,7 @@ Recommends:     %{name}+pcsc = %{version}
 
 %files -n python3-pynitrokey -f %{pyproject_files}
 %{_bindir}/nitropy
+%license LICENSE
 
 
 %changelog
