@@ -44,7 +44,7 @@ Summary:        %{summary}
 
 %install
 %pyproject_install
-%pyproject_save_files -l nitrokey
+%pyproject_save_files -l nitrokey -L
 
 
 %check
@@ -52,7 +52,7 @@ Summary:        %{summary}
 
 
 %files -n python3-nitrokey -f %{pyproject_files}
-
+%license LICENSE
 
 %changelog
 %autochangelog
