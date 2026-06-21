@@ -46,7 +46,6 @@ Summary:        %{summary}
 
 %files -n python3-oath -f %{pyproject_files}
 %doc README.rst
-%doc doc/*
 
 
 %changelog
