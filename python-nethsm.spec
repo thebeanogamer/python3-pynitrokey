@@ -36,7 +36,7 @@ Summary:        %{summary}
 
 %install
 %pyproject_install
-%pyproject_save_files -l nethsm
+%pyproject_save_files -l nethsm -L
 
 
 %check
@@ -46,6 +46,7 @@ Summary:        %{summary}
 
 
 %files -n python3-nethsm -f %{pyproject_files}
+%license LICENSE
 
 
 %changelog
