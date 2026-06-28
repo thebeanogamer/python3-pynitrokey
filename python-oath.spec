@@ -5,7 +5,7 @@ Summary:        Python implementation of HOTP, TOTP and OCRA
 
 License:        BSD-3-Clause
 URL:            https://github.com/bdauvergne/python-oath
-Source:         %{url}/archive/refs/tags/v%{version}.tar.gz
+Source:         %{url}/archive/v%{version}/%{name}-v%{version}.tar.gz
 Patch:          %{url}/pull/41.patch
 
 BuildArch:      noarch
@@ -24,7 +24,7 @@ Summary:        %{summary}
 
 
 %prep
-%autosetup -p1 -n python-oath-%{version}
+%autosetup -p1
 
 
 %generate_buildrequires
